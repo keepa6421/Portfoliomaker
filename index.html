@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PortfolioGenius | Full Website Creator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar Editor -->
+        <aside class="editor-sidebar">
+            <header class="editor-header">
+                <div class="logo">
+                    <span class="logo-icon">✨</span>
+                    <h1>PortfolioGenius</h1>
+                </div>
+            </header>
+
+            <div class="form-sections">
+                <!-- Personal Info -->
+                <section class="form-group">
+                    <h3><span>👤</span> Personal Details</h3>
+                    <input type="text" id="input-name" placeholder="Full Name" value="Alex Rivera">
+                    <input type="text" id="input-role" placeholder="Role (e.g. Creative Developer)"
+                        value="Creative Developer">
+                    <textarea id="input-bio"
+                        placeholder="Short Bio">Building immersive digital experiences that blend art with technology.</textarea>
+                </section>
+
+                <!-- Skills -->
+                <section class="form-group">
+                    <h3><span>🛠️</span> Skills (comma separated)</h3>
+                    <input type="text" id="input-skills" placeholder="React, UI Design, Node.js"
+                        value="React, UI/UX, JavaScript, Node.js, CSS Art">
+                </section>
+
+                <!-- Experience -->
+                <section class="form-group">
+                    <h3><span>💼</span> Recent Experience</h3>
+                    <input type="text" id="input-exp-title" placeholder="Job Title" value="Senior Developer">
+                    <input type="text" id="input-exp-company" placeholder="Company" value="Nebula Systems">
+                    <input type="text" id="input-exp-date" placeholder="Duration (e.g. 2021 - Present)"
+                        value="2021 - Present">
+                </section>
+
+                <!-- Projects -->
+                <section class="form-group">
+                    <h3><span>🚀</span> Projects</h3>
+                    <div id="projects-list">
+                        <div class="project-entry">
+                            <input type="text" class="input-project-title" placeholder="Project Name"
+                                value="Aura Web Framework">
+                            <textarea class="input-project-desc"
+                                placeholder="Project Description">A lightning-fast framework for modern web applications.</textarea>
+                            <button class="remove-project-btn secondary-btn">Remove</button>
+                        </div>
+                    </div>
+                    <button id="add-project-btn" class="secondary-btn">Add Project</button>
+                </section>
+
+                <!-- Theme -->
+                <section class="form-group">
+                    <h3><span>🎨</span> Website Theme</h3>
+                    <div class="template-grid">
+                        <button class="tpl-btn active" data-template="modern">Modern Dark</button>
+                        <button class="tpl-btn" data-template="minimal">Soft Light</button>
+                        <button class="tpl-btn" data-template="gradient">Vibrant Glass</button>
+                    </div>
+                </section>
+            </div>
+
+            <footer class="editor-footer">
+                <div id="lib-status" class="status-indicator">Initializing...</div>
+                <button id="download-btn" class="primary-btn">Download Portfolio Website</button>
+                <button id="download-single-btn" class="secondary-btn">Download Single HTML</button>
+                <button id="copy-btn" class="secondary-btn">Copy Website Code</button>
+            </footer>
+        </aside>
+
+        <!-- Preview Area -->
+        <main class="preview-area">
+            <div class="preview-nav-bar">
+                <div class="preview-badge">Live Website Preview</div>
+                <div class="device-controls">
+                    <span>Desktop Mode</span>
+                </div>
+            </div>
+
+            <div id="preview-container" class="preview-viewport theme-modern">
+                <div class="portfolio-web-output">
+                    <!-- Navigation -->
+                    <nav class="p-nav">
+                        <div class="p-brand" id="p-name-brand">Alex Rivera</div>
+                        <ul class="p-links">
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#skills">Skills</a></li>
+                            <li><a href="#projects">Work</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </nav>
+
+                    <!-- Hero Section -->
+                    <header id="about" class="p-section p-hero">
+                        <h1 id="p-name">Alex Rivera</h1>
+                        <h2 id="p-role">Creative Developer</h2>
+                        <p id="p-bio">Building immersive digital experiences that blend art with technology.</p>
+                        <a href="mailto:alex@example.com" class="p-btn-main" id="p-cta-btn">Get in touch</a>
+                    </header>
+
+                    <!-- Skills Section -->
+                    <section id="skills" class="p-section">
+                        <h3 class="p-section-title">Expertise</h3>
+                        <div id="p-skills-grid" class="p-grid-tags">
+                            <!-- Injected Skills -->
+                        </div>
+                    </section>
+
+                    <!-- Experience Section -->
+                    <section id="experience" class="p-section">
+                        <h3 class="p-section-title">Journey</h3>
+                        <div class="p-exp-card">
+                            <h4 id="p-exp-title">Senior Developer</h4>
+                            <div class="p-exp-meta">
+                                <span id="p-exp-company">Nebula Systems</span>
+                                <span class="sep">|</span>
+                                <span id="p-exp-date">2021 - Present</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Projects Section -->
+                    <section id="projects" class="p-section">
+                        <h3 class="p-section-title">Projects</h3>
+                        <div id="p-projects-grid" class="p-projects-container">
+                            <!-- Injected Projects -->
+                        </div>
+                    </section>
+
+                    <!-- Footer -->
+                    <footer id="contact" class="p-footer">
+                        <p>&copy; 2026 <span id="p-foot-name">Alex Rivera</span>. All rights reserved.</p>
+                        <div class="p-social">
+                            <a href="#">LinkedIn</a>
+                            <a href="#">GitHub</a>
+                            <a href="#">Twitter</a>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
